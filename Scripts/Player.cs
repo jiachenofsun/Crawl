@@ -27,14 +27,14 @@ public class Player : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space) && canJump())
 		{
-			playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+			//playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 			playerRB.AddForce(new Vector2(0, jumpforce));
+			Debug.Log(playerRB.velocity.y);
 		}
 	}
 
 	bool canJump()
 	{
-		Debug.Log(feetContact);
 		return feetContact;
 	}
 }
