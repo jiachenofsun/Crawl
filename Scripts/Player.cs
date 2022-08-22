@@ -24,15 +24,11 @@ public class Player : MonoBehaviour
 		Vector2 movement = new Vector2(MoveHor * movespeed, playerRB.velocity.y);
 
 		playerRB.velocity = movement;
-		Debug.Log(playerRB.velocity);
 
 		if (Input.GetKeyDown(KeyCode.Space) && canJump())
 		{
 			//playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 			playerRB.AddForce(new Vector2(0, jumpforce));
-		} else
-        {
-			//playerRB.AddForce(new Vector2(0, -100f));
 		}
 	}
 
