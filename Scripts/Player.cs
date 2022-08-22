@@ -22,8 +22,7 @@ public class Player : MonoBehaviour
 	{
 		float MoveHor = Input.GetAxisRaw("Horizontal");
 		Vector2 movement = new Vector2(MoveHor * movespeed, 0);
-		movement = movement * Time.deltaTime;
-
+        Debug.Log(movement);
 		playerRB.AddForce(movement);
 		if (playerRB.velocity.x > maxspeed)
 		{
