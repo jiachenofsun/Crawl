@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	public float movespeed;
-	public float maxspeed;
+
 	public float jumpforce;
 
 	Rigidbody2D playerRB;
@@ -21,17 +21,10 @@ public class Player : MonoBehaviour
 	void Update()
 	{
 		float MoveHor = Input.GetAxisRaw("Horizontal");
-		Vector2 movement = new Vector2(MoveHor * movespeed, 0);
-        Debug.Log(movement);
-		playerRB.AddForce(movement);
-		if (playerRB.velocity.x > maxspeed)
-		{
-			playerRB.velocity = new Vector2(maxspeed, playerRB.velocity.y);
-		}
-		if (playerRB.velocity.x < -maxspeed)
-		{
-			playerRB.velocity = new Vector2(-maxspeed, playerRB.velocity.y);
-		}
+		Vector2 movement = new Vector2(MoveHor * movespeed, playerRB.velocity.y);
+
+		playerRB.velocity = movement;
+
 		if (Input.GetKeyDown(KeyCode.Space) && canJump())
 		{
 			playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
@@ -41,6 +34,7 @@ public class Player : MonoBehaviour
 
 	bool canJump()
 	{
+		Debug.Log(feetContact);
 		return feetContact;
 	}
 }
