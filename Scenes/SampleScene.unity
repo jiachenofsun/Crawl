@@ -162,6 +162,7 @@ MonoBehaviour:
   - {fileID: 459135586293125931, guid: 096d0de5ebc5e400cb1d853082bdd0ef, type: 3}
   - {fileID: 7507603292690492230, guid: 9ee9dd9fe514b4523ad7e7c4007e5959, type: 3}
   - {fileID: 31349023911101415, guid: 074754e0410854883956694700dbdddc, type: 3}
+  player: {fileID: 0}
   moveAmount: 10
   startTimeBtwRoom: 0.5
   minX: -15
