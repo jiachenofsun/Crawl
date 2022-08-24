@@ -10,21 +10,45 @@ public class FeetCollider : MonoBehaviour
 		return obj.layer == LayerMask.NameToLayer("Floor");
 	}
 
-	// use coll.gameObject if you need a reference coll's GameObject
-	void OnCollisionEnter2D(Collision2D coll)
-	{
-		if (isFloor(coll.gameObject))
-		{
-			GetComponentInParent<Player>().feetContact = true;
-		}
-	}
+    private int m_ColCount = 0;
 
-	void OnCollisionExit2D(Collision2D coll)
-	{
-		if (isFloor(coll.gameObject))
-		{
-			GetComponentInParent<Player>().feetContact = false;
-		}
+    private float m_DisableTimer;
 
-	}
+    private void OnEnable()
+    {
+        m_ColCount = 0;
+    }
+
+    public bool State()
+    {
+        if (m_DisableTimer > 0)
+            return false;
+        return m_ColCount > 0;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isFloor(other.gameObject))
+        {
+            m_ColCount++;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (isFloor(other.gameObject))
+        {
+            m_ColCount--;
+        }
+    }
+
+    void Update()
+    {
+        m_DisableTimer -= Time.deltaTime;
+    }
+
+    public void Disable(float duration)
+    {
+        m_DisableTimer = duration;
+    }
 }
