@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 
 		// -- Animations -- 
 		//Jump
-		if (Input.GetKeyDown(KeyCode.Space) && canJump() && m_grounded)
+		if (Input.GetKeyDown(KeyCode.Space) && m_grounded)
 		{
 			m_animator.SetTrigger("Jump");
 			m_grounded = false;
@@ -95,8 +95,21 @@ public class Player : MonoBehaviour
 			m_animator.SetInteger("AnimState", 0);
 	}
 
-	bool canJump()
+	// Animation Events
+	// placeholders for now
+	void AE_runStop()
 	{
-		return feetContact;
+	}
+
+	void AE_footstep()
+	{
+	}
+
+	void AE_Jump()
+	{
+	}
+
+	void AE_Landing()
+	{
 	}
 }

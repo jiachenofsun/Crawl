@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7853426713638563735, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5692587709083937071, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
     - {fileID: 5779919143759674799, guid: e481822248898d04e9808a3d3ca78e5a, type: 3}
@@ -220,8 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8755ec019357e467cb0ff671f53183e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 5
-  jumpforce: 5
+  movespeed: 3
+  jumpforce: 10
   feetContact: 0
 --- !u!114 &162466118
 MonoBehaviour:
@@ -954,6 +958,10 @@ PrefabInstance:
     - target: {fileID: 4529553893738907413, guid: 2f936c7e07831451784f608af352f826, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529553893738907413, guid: 2f936c7e07831451784f608af352f826, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f936c7e07831451784f608af352f826, type: 3}
