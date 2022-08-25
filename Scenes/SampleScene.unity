@@ -524,8 +524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c96fc1923e2460c95bd28232a18867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0, z: 0}
-  smoothFactor: 0
+  offset: {x: 0, y: 0, z: -10}
+  smoothFactor: 3
 --- !u!1 &673909628
 GameObject:
   m_ObjectHideFlags: 0

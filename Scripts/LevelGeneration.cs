@@ -24,8 +24,7 @@ public class LevelGeneration : MonoBehaviour
 
     private bool downRecently;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         int randStartPos = Random.Range(0, startingPostions.Length);
         transform.position = startingPostions[randStartPos].position;
