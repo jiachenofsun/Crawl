@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public Vector3 offset;
     [Range(2, 10)]
     public float smoothFactor;
@@ -12,7 +12,7 @@ public class Camera : MonoBehaviour
 
     void Start()
     {
-        
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void FixedUpdate()
