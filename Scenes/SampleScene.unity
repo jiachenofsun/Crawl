@@ -164,7 +164,7 @@ MonoBehaviour:
   - {fileID: 31349023911101415, guid: 074754e0410854883956694700dbdddc, type: 3}
   player: {fileID: 6240374368313159297, guid: 2f936c7e07831451784f608af352f826, type: 3}
   moveAmount: 10
-  startTimeBtwRoom: 0.5
+  startTimeBtwRoom: 0
   minX: -15
   maxX: 15
   minY: 0

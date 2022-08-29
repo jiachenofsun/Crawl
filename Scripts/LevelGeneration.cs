@@ -13,12 +13,13 @@ public class LevelGeneration : MonoBehaviour
 
 
     private float timeBtwRoom;
-    public float startTimeBtwRoom = 1f;
+    public float startTimeBtwRoom = 0f;
 
     public float minX;
     public float maxX;
     public float minY;
     public bool stopGeneration;
+
 
     public LayerMask room;
 
