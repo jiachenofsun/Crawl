@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 9026262578686613428}
   - component: {fileID: 9213966034598421399}
   - component: {fileID: 1278811193912932388}
+  - component: {fileID: 113247929784981942}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -242,3 +243,29 @@ MonoBehaviour:
   movespeed: 2
   jumpforce: 17
   feetContact: 0
+--- !u!61 &113247929784981942
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6240374368313159297}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 026bc2510a1634994817f7c8dca3842b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02850379, y: 0.7393661}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 3.125, y: 2.5}
+    newSize: {x: 3.125, y: 2.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6309222, y: 1.2692567}
+  m_EdgeRadius: 0
